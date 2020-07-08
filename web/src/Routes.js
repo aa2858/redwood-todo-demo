@@ -13,7 +13,7 @@ const Routes = () => {
   return (
     <Router>
       <Route path="/login" page={LoginPage} name="login" />
-      <Private>
+      <Private unauthenticated="login">
         <Route path="/todo/{id:Int}" page={TodoPage} name="todo" />
         <Route path="/count" page={CountPage} name="count" />
         <Route path="/" page={HomePage} name="home" />
